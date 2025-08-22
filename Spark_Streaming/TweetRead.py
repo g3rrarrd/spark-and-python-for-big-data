@@ -3,7 +3,7 @@ import socket
 import time
 
 
-bearer_token = 'AAAAAAAAAAAAAAAAAAAAALXj3gEAAAAAqqkaiGg1nvygFoVnKUw9I1%2BWkt4%3DkDHvNoKZYfmbDamW7JK0Y5JPYHq64CeK2ZTKIgY42Hvjptj91G'
+bearer_token = ''
 
 client = tweepy.Client(bearer_token=bearer_token)
 
