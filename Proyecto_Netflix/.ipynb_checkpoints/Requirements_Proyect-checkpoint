@@ -1,0 +1,59 @@
+Ejercicio: Plataforma de Streaming de Películas – Análisis, Predicción y Recomendación en Tiempo Real
+Contexto
+
+Imagina que trabajas en una plataforma tipo Netflix. Tienes datos históricos de usuarios, suscripciones, películas y calificaciones, además de un streaming de eventos en tiempo real con las interacciones de los usuarios (ej. cada vez que reproducen, pausan, dejan de ver o califican una película).
+
+El reto es construir un pipeline en Spark que:
+
+🔹 Parte 1 – Análisis con DataFrames
+
+Carga un dataset histórico (ejemplo: ratings.csv, movies.csv, users.csv).
+
+Usa Spark SQL/DataFrames para responder:
+
+¿Cuáles son las películas más vistas en general?
+
+¿Qué géneros prefiere cada rango de edad?
+
+Top 5 películas por rating promedio.
+
+🔹 Parte 2 – Machine Learning (MLlib)
+
+Predicción de churn (abandono de usuarios)
+
+Dataset de usuarios con: edad, género, uso semanal, horas de visualización, cantidad de películas terminadas, etc.
+
+Aplica Logistic Regression o Random Forest para predecir si un usuario tiene alta probabilidad de cancelar la suscripción.
+
+Predicción de popularidad de películas
+
+Dataset de películas con: presupuesto, género, duración, rating medio histórico, cantidad de reviews, etc.
+
+Aplica un Linear Regression para predecir el número esperado de visualizaciones en el siguiente mes.
+
+Clustering de usuarios
+
+Segmenta usuarios con KMeans según patrones de consumo (ej. “maratoneros de series”, “fans de acción”, “ocasionales”).
+
+🔹 Parte 3 – NLP
+
+Usa los comentarios de los usuarios (reviews.csv) sobre las películas.
+
+Preprocesa el texto con Tokenizer, StopWordsRemover, TF-IDF.
+
+Entrena un modelo de clasificación de sentimientos (positivo/negativo) con Logistic Regression o RandomForestClassifier.
+
+🔹 Parte 4 – Sistema de Recomendación
+
+Construye un ALS (Alternating Least Squares) basado en las calificaciones de usuarios y películas.
+
+Genera recomendaciones personalizadas:
+
+Recomendaciones top-5 para cada usuario.
+
+Películas similares a “Inception” según ratings.
+
+🔹 Parte 5 – Spark Streaming
+
+Simula un flujo de eventos en tiempo real (puedes usar Kafka, socket o un archivo que vaya creciendo).
+Ejemplo de evento JSON:
